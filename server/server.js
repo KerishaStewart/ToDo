@@ -13,8 +13,8 @@ app.use(bodyParser.json());
 //console.log(process.env.NODE_ENV);
 
 const sasToken = config.get('sasToken');
-const containerName = 'todos-1';
-const accountName = 'testad7a';
+const containerName = config.get('containerName');
+const accountName = config.get('accountName');
 let blobServiceClient = null;
 try {
      blobServiceClient = new BlobServiceClient(

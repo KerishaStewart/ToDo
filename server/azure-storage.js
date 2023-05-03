@@ -12,7 +12,7 @@ const blobServiceClient = new BlobServiceClient(
     `https://${accountName}.blob.core.windows.net?${sasToken}`
 );
 
-const containerName = 'todos';
+const containerName = config.get('containerName');
 
 export const uploadTodos = async (todos) => {
   try {
