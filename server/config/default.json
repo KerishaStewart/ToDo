@@ -1,0 +1,4 @@
+{
+    "sasToken" : "${secrets.sasToken}",
+    "access" : "${secrets.access}"
+}
