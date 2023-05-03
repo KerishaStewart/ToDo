@@ -1,4 +1,5 @@
 {
     "sasToken" : "${secrets.sasToken}",
-    "access" : "${secrets.access}"
+    "access" : "${secrets.access}",
+    "accountName" : "${secrets.accountName}"
 }

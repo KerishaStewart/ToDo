@@ -2,8 +2,11 @@ import {
     BlobServiceClient
   } from '@azure/storage-blob';
 
-const accountName = 'testad7a';
-const sasToken = 'sp=racwdl&st=2023-04-26T00:37:23Z&se=2023-04-26T08:37:23Z&spr=https&sv=2021-12-02&sr=c&sig=1eeLK7Q%2FyeRjAQwKSj8WsomgbFiQvGqV3FTcgNYl2pg%3D';
+const config = require('config');
+
+
+const accountName = config.get('accountName');
+const sasToken = config.get('sasToken');
 
 const blobServiceClient = new BlobServiceClient(
     `https://${accountName}.blob.core.windows.net?${sasToken}`
